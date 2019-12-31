@@ -13,19 +13,22 @@
       const typeof( ((type *)0)->member ) *__mptr = (ptr);    \
       (type *)( (char *)__mptr - offsetof(type,member) );})
 
+#define LIST_HEAD_INIT(name) { &(name),&(name)}
+#define LIST_HEAD(name) \
+        struct list_node name = LIST_HEAD_INIT(name)
+
 typedef  struct list_node{ //链表
-    struct node * prev;
-    struct node * tail;
+    struct list_node * prev;
+    struct list_node * tail;
 } node;
 
-typedef struct node* Node;
+typedef node* Node;
 
 typedef struct linkList{
-    int size;
     int length;
-    Node tail;  //链表中的头节点
-    Node head;  //链表中的尾节点
-}linkList;
+    Node head;  //链表中的头节点
+    Node tail;  //链表中的尾节点
+} linkList;
 typedef linkList* LinkList;
 
 typedef struct data{
@@ -34,8 +37,9 @@ typedef struct data{
 }data;
 
 LinkList init();
-int add(LinkList  _linkList,Node _list);
-
+int add_head(LinkList  _linkList,Node _node);
+int add_tail(LinkList  _linkList,Node _node);
+int add_new(LinkList _linList,Node new,Node prev,Node next);//添加一个节点
 
 
 #endif //PROJECT_LIST_H
