@@ -1,5 +1,5 @@
 //
-// Created by ELIAN-FM-JSJ297 on 2019/12/13.
+// Created by wangshu on 2019/12/13.
 //
 
 #ifndef PROJECT_LIST_H
@@ -17,7 +17,7 @@
 #define LIST_HEAD(name) \
         struct list_node name = LIST_HEAD_INIT(name)
 
-typedef  struct list_node{ //链表
+typedef struct list_node{ //链表
     struct list_node * prev;
     struct list_node * tail;
 } node;
@@ -37,9 +37,11 @@ typedef struct data{
 }data;
 
 LinkList init();
+Node init_node();
+int get_length(LinkList _linList);
 int add_head(LinkList  _linkList,Node _node);
 int add_tail(LinkList  _linkList,Node _node);
 int add_new(LinkList _linList,Node new,Node prev,Node next);//添加一个节点
-
+void traversal(LinkList _linList);
 
 #endif //PROJECT_LIST_H
