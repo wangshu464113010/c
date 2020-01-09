@@ -74,6 +74,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="D:/workspaceforc/project/json/json.c">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="D:/workspaceforc/project/json/json.h">
+			<Option target="project"/>
+		</Unit>
 		<Unit filename="D:/workspaceforc/project/list.c">
 			<Option target="project"/>
 		</Unit>

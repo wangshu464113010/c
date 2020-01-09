@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/project.dir/json/json.c.obj"
   "CMakeFiles/project.dir/list.c.obj"
   "CMakeFiles/project.dir/main.c.obj"
   "libproject.dll.a"

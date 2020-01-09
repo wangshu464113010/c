@@ -79,7 +79,7 @@ void traversal(LinkList _linkList){
     }
     Node  n = _linkList->head;
     for(int i = 0;i<_linkList->length;++i){
-        printf("_linkList-> %d 的地址 = %d\n",(i+1),n);
+        printf("_linkList-> %d 的地址 = %#x\n",(i+1),n);
         n = n->tail;
     }
 }

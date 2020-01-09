@@ -122,6 +122,33 @@ project/fast:
 	$(MAKE) -f CMakeFiles\project.dir\build.make CMakeFiles/project.dir/build
 .PHONY : project/fast
 
+json/json.obj: json/json.c.obj
+
+.PHONY : json/json.obj
+
+# target to build an object file
+json/json.c.obj:
+	$(MAKE) -f CMakeFiles\project.dir\build.make CMakeFiles/project.dir/json/json.c.obj
+.PHONY : json/json.c.obj
+
+json/json.i: json/json.c.i
+
+.PHONY : json/json.i
+
+# target to preprocess a source file
+json/json.c.i:
+	$(MAKE) -f CMakeFiles\project.dir\build.make CMakeFiles/project.dir/json/json.c.i
+.PHONY : json/json.c.i
+
+json/json.s: json/json.c.s
+
+.PHONY : json/json.s
+
+# target to generate assembly for a file
+json/json.c.s:
+	$(MAKE) -f CMakeFiles\project.dir\build.make CMakeFiles/project.dir/json/json.c.s
+.PHONY : json/json.c.s
+
 list.obj: list.c.obj
 
 .PHONY : list.obj
@@ -185,6 +212,9 @@ help:
 	@echo ... project
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... json/json.obj
+	@echo ... json/json.i
+	@echo ... json/json.s
 	@echo ... list.obj
 	@echo ... list.i
 	@echo ... list.s
