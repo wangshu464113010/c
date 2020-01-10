@@ -41,7 +41,8 @@ Node init_node();
 int get_length(LinkList _linList);
 int add_head(LinkList  _linkList,Node _node);
 int add_tail(LinkList  _linkList,Node _node);
-int add_new(LinkList _linList,Node new,Node prev,Node next);//添加一个节点
-void traversal(LinkList _linList);
+int add_new(LinkList _linkList,Node new,Node prev,Node next);//添加一个节点
+void traversal(LinkList _linkList);
+int delete_node(LinkList _linkList,Node node);
 
 #endif //PROJECT_LIST_H
