@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
+D:/workspaceforc/project/list.c
+list.h
 D:/workspaceforc/project/list.h
-
-D:/workspaceforc/project/main.c
-stdio.h
--
 stdlib.h
 -
-list.h
+stdio.h
+-
+
 D:/workspaceforc/project/list.h
 

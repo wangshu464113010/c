@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
+  "D:/workspaceforc/project/data/data.c" "D:/workspaceforc/project/cmake-build-debug/CMakeFiles/project.dir/data/data.c.obj"
   "D:/workspaceforc/project/json/json.c" "D:/workspaceforc/project/cmake-build-debug/CMakeFiles/project.dir/json/json.c.obj"
   "D:/workspaceforc/project/list.c" "D:/workspaceforc/project/cmake-build-debug/CMakeFiles/project.dir/list.c.obj"
   "D:/workspaceforc/project/main.c" "D:/workspaceforc/project/cmake-build-debug/CMakeFiles/project.dir/main.c.obj"

@@ -31,10 +31,6 @@ typedef struct linkList{
 } linkList;
 typedef linkList* LinkList;
 
-typedef struct data{
-    Node node;
-    void * yourData;
-}data;
 
 LinkList init();
 Node init_node();
