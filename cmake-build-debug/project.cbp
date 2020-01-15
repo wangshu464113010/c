@@ -74,6 +74,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="D:/workspaceforc/project/base64.c">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="D:/workspaceforc/project/base64.h">
+			<Option target="project"/>
+		</Unit>
 		<Unit filename="D:/workspaceforc/project/data/data.c">
 			<Option target="project"/>
 		</Unit>
