@@ -11,9 +11,9 @@ int main() {
     setEnCodeUTF8();
 
     printf("base64_array = %s\n",base64_array);
-    char* str = "ABCDEFGHIJK";
+    char str[] = "123456789";
     char * s ="";
-    base64_encode(str, sizeof("ABCDEFGHIJK"),s,1);
+    base64_encode(str, strlen(str),s,1);
     return 0;
 }
 void openCalc(){
