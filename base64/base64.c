@@ -43,7 +43,7 @@ int base64_encode(char* srcString,long long srcLength,char* destStr,long long de
     }
     if(srcLength%3 == 1){
         *destString++ = base64_array[(srcString[0] >> 2) & 0x3f];
-        *destString++ = base64_array[(srcString[0] << 4) & 0x30 | ((src_str[1]>>4) & 0x0f)];
+        *destString++ = base64_array[(srcString[0] << 4) & 0x30 | ((srcString[1]>>4) & 0x0f)];
         *destString++ = '=';
         *destString++ = '=';
     }else if(srcLength%3 == 2){
