@@ -108,18 +108,18 @@ CMakeFiles/project.dir/data/data.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/project.dir/data/data.c.s"
 	D:\Soft\mingw-w64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\workspaceforc\project\data\data.c -o CMakeFiles\project.dir\data\data.c.s
 
-CMakeFiles/project.dir/base64.c.obj: CMakeFiles/project.dir/flags.make
-CMakeFiles/project.dir/base64.c.obj: ../base64.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\workspaceforc\project\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/project.dir/base64.c.obj"
-	D:\Soft\mingw-w64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\project.dir\base64.c.obj   -c D:\workspaceforc\project\base64.c
+CMakeFiles/project.dir/base64/base64.c.obj: CMakeFiles/project.dir/flags.make
+CMakeFiles/project.dir/base64/base64.c.obj: ../base64/base64.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\workspaceforc\project\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/project.dir/base64/base64.c.obj"
+	D:\Soft\mingw-w64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\project.dir\base64\base64.c.obj   -c D:\workspaceforc\project\base64\base64.c
 
-CMakeFiles/project.dir/base64.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/project.dir/base64.c.i"
-	D:\Soft\mingw-w64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\workspaceforc\project\base64.c > CMakeFiles\project.dir\base64.c.i
+CMakeFiles/project.dir/base64/base64.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/project.dir/base64/base64.c.i"
+	D:\Soft\mingw-w64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\workspaceforc\project\base64\base64.c > CMakeFiles\project.dir\base64\base64.c.i
 
-CMakeFiles/project.dir/base64.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/project.dir/base64.c.s"
-	D:\Soft\mingw-w64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\workspaceforc\project\base64.c -o CMakeFiles\project.dir\base64.c.s
+CMakeFiles/project.dir/base64/base64.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/project.dir/base64/base64.c.s"
+	D:\Soft\mingw-w64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\workspaceforc\project\base64\base64.c -o CMakeFiles\project.dir\base64\base64.c.s
 
 # Object files for target project
 project_OBJECTS = \
@@ -127,7 +127,7 @@ project_OBJECTS = \
 "CMakeFiles/project.dir/list.c.obj" \
 "CMakeFiles/project.dir/json/json.c.obj" \
 "CMakeFiles/project.dir/data/data.c.obj" \
-"CMakeFiles/project.dir/base64.c.obj"
+"CMakeFiles/project.dir/base64/base64.c.obj"
 
 # External object files for target project
 project_EXTERNAL_OBJECTS =
@@ -136,7 +136,7 @@ project.exe: CMakeFiles/project.dir/main.c.obj
 project.exe: CMakeFiles/project.dir/list.c.obj
 project.exe: CMakeFiles/project.dir/json/json.c.obj
 project.exe: CMakeFiles/project.dir/data/data.c.obj
-project.exe: CMakeFiles/project.dir/base64.c.obj
+project.exe: CMakeFiles/project.dir/base64/base64.c.obj
 project.exe: CMakeFiles/project.dir/build.make
 project.exe: CMakeFiles/project.dir/linklibs.rsp
 project.exe: CMakeFiles/project.dir/objects1.rsp

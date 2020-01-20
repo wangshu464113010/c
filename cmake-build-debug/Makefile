@@ -122,32 +122,32 @@ project/fast:
 	$(MAKE) -f CMakeFiles\project.dir\build.make CMakeFiles/project.dir/build
 .PHONY : project/fast
 
-base64.obj: base64.c.obj
+base64/base64.obj: base64/base64.c.obj
 
-.PHONY : base64.obj
+.PHONY : base64/base64.obj
 
 # target to build an object file
-base64.c.obj:
-	$(MAKE) -f CMakeFiles\project.dir\build.make CMakeFiles/project.dir/base64.c.obj
-.PHONY : base64.c.obj
+base64/base64.c.obj:
+	$(MAKE) -f CMakeFiles\project.dir\build.make CMakeFiles/project.dir/base64/base64.c.obj
+.PHONY : base64/base64.c.obj
 
-base64.i: base64.c.i
+base64/base64.i: base64/base64.c.i
 
-.PHONY : base64.i
+.PHONY : base64/base64.i
 
 # target to preprocess a source file
-base64.c.i:
-	$(MAKE) -f CMakeFiles\project.dir\build.make CMakeFiles/project.dir/base64.c.i
-.PHONY : base64.c.i
+base64/base64.c.i:
+	$(MAKE) -f CMakeFiles\project.dir\build.make CMakeFiles/project.dir/base64/base64.c.i
+.PHONY : base64/base64.c.i
 
-base64.s: base64.c.s
+base64/base64.s: base64/base64.c.s
 
-.PHONY : base64.s
+.PHONY : base64/base64.s
 
 # target to generate assembly for a file
-base64.c.s:
-	$(MAKE) -f CMakeFiles\project.dir\build.make CMakeFiles/project.dir/base64.c.s
-.PHONY : base64.c.s
+base64/base64.c.s:
+	$(MAKE) -f CMakeFiles\project.dir\build.make CMakeFiles/project.dir/base64/base64.c.s
+.PHONY : base64/base64.c.s
 
 data/data.obj: data/data.c.obj
 
@@ -266,9 +266,9 @@ help:
 	@echo ... project
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... base64.obj
-	@echo ... base64.i
-	@echo ... base64.s
+	@echo ... base64/base64.obj
+	@echo ... base64/base64.i
+	@echo ... base64/base64.s
 	@echo ... data/data.obj
 	@echo ... data/data.i
 	@echo ... data/data.s

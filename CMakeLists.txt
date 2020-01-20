@@ -3,4 +3,4 @@ project(project C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(project main.c list.h list.c json/json.h json/json.c data/data.h data/data.c base64.c base64.h)
+add_executable(project main.c list.h list.c json/json.h json/json.c data/data.h data/data.c base64/base64.c base64/base64.h)

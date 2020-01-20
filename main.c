@@ -2,22 +2,18 @@
 #include <stdlib.h>
 #include <string.h>
 #include "list.h"
-#include "base64.h"
+#include "base64/base64.h"
 void openCalc();
 void setEnCodeUTF8();
 void testLinkList();
 extern char* base64_array;
 int main() {
     setEnCodeUTF8();
-    toNumberSystem(10,2);
+
     printf("base64_array = %s\n",base64_array);
-    char* a = "ABCD";
-    printf("a+3 = %c\n",*(a+3));
-    printf("a+4 = %d\n",*(a+4));
-    while(*a){
-        printf("a = %#x\n",a);
-        a++;
-    }
+    char* str = "ABCDEF";
+    char * s ="";
+    base64_encode(str,6,s,1);
     return 0;
 }
 void openCalc(){
