@@ -6,16 +6,38 @@
 void openCalc();
 void setEnCodeUTF8();
 void testLinkList();
+int* Swap(int *a, int *b);
 extern char* base64_array;
 int main() {
     setEnCodeUTF8();
 
-    printf("base64_array = %s\n",base64_array);
+
+
+    
+   /**
+    int* (*pSwap) (int *, int *);//下面定义一个函数指针，这是一个指针，指向一个返回值为int *的函数
+    int a = 99, b= 100;
+    int * c;
+    c=Swap(&a,&b);
+    pSwap=Swap;//得到这个函数的地址
+    printf("返回的数值是,a原来是99，现在是: %d\n",*c);
+    printf("返回的数值是,a原来是99，现在是: %d\n",*pSwap(&a, &b));
+    */
+    /*printf("base64_array = %s\n",base64_array);
     char str[] = "123456789";
     char * s ="";
-    base64_encode(str, strlen(str),s,1);
+    base64_encode(str, strlen(str),s,1);*/
     return 0;
 }
+
+int* Swap(int *a, int *b){
+    int temp;
+    temp = *a;
+    *a = *b;
+    *b = temp;
+    return a;
+}
+
 void openCalc(){
     system("calc");
 }
