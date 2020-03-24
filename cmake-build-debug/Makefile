@@ -176,6 +176,33 @@ data/data.c.s:
 	$(MAKE) -f CMakeFiles\project.dir\build.make CMakeFiles/project.dir/data/data.c.s
 .PHONY : data/data.c.s
 
+file/copyfile.obj: file/copyfile.c.obj
+
+.PHONY : file/copyfile.obj
+
+# target to build an object file
+file/copyfile.c.obj:
+	$(MAKE) -f CMakeFiles\project.dir\build.make CMakeFiles/project.dir/file/copyfile.c.obj
+.PHONY : file/copyfile.c.obj
+
+file/copyfile.i: file/copyfile.c.i
+
+.PHONY : file/copyfile.i
+
+# target to preprocess a source file
+file/copyfile.c.i:
+	$(MAKE) -f CMakeFiles\project.dir\build.make CMakeFiles/project.dir/file/copyfile.c.i
+.PHONY : file/copyfile.c.i
+
+file/copyfile.s: file/copyfile.c.s
+
+.PHONY : file/copyfile.s
+
+# target to generate assembly for a file
+file/copyfile.c.s:
+	$(MAKE) -f CMakeFiles\project.dir\build.make CMakeFiles/project.dir/file/copyfile.c.s
+.PHONY : file/copyfile.c.s
+
 json/json.obj: json/json.c.obj
 
 .PHONY : json/json.obj
@@ -272,6 +299,9 @@ help:
 	@echo ... data/data.obj
 	@echo ... data/data.i
 	@echo ... data/data.s
+	@echo ... file/copyfile.obj
+	@echo ... file/copyfile.i
+	@echo ... file/copyfile.s
 	@echo ... json/json.obj
 	@echo ... json/json.i
 	@echo ... json/json.s

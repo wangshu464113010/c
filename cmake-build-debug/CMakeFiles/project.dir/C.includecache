@@ -6,23 +6,21 @@
 
 #IncludeRegexTransform: 
 
-D:/workspaceforc/project/base64/base64.h
+D:/workspaceforc/project/file/copyfile.c
 stdio.h
 -
 stdlib.h
 -
-
-D:/workspaceforc/project/list.h
-
-D:/workspaceforc/project/main.c
+copyfile.h
+D:/workspaceforc/project/file/copyfile.h
 stdio.h
 -
-stdlib.h
+stdio.h
 -
-string.h
+stdio.h
 -
-list.h
-D:/workspaceforc/project/list.h
-base64/base64.h
-D:/workspaceforc/project/base64/base64.h
+stdarg.h
+-
+
+D:/workspaceforc/project/file/copyfile.h
 

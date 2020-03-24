@@ -3,6 +3,7 @@
 #include <string.h>
 #include "list.h"
 #include "base64/base64.h"
+#include "./file/copyfile.h"
 void openCalc();
 void setEnCodeUTF8();
 void testLinkList();
@@ -11,7 +12,7 @@ extern char* base64_array;
 int main() {
     setEnCodeUTF8();
 
-
+    copyFile();
 
 
    /**

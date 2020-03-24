@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/project.dir/base64/base64.c.obj"
   "CMakeFiles/project.dir/data/data.c.obj"
+  "CMakeFiles/project.dir/file/copyfile.c.obj"
   "CMakeFiles/project.dir/json/json.c.obj"
   "CMakeFiles/project.dir/list.c.obj"
   "CMakeFiles/project.dir/main.c.obj"

@@ -86,6 +86,12 @@
 		<Unit filename="D:/workspaceforc/project/data/data.h">
 			<Option target="project"/>
 		</Unit>
+		<Unit filename="D:/workspaceforc/project/file/copyfile.c">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="D:/workspaceforc/project/file/copyfile.h">
+			<Option target="project"/>
+		</Unit>
 		<Unit filename="D:/workspaceforc/project/json/json.c">
 			<Option target="project"/>
 		</Unit>

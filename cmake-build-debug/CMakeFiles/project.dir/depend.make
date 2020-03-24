@@ -7,6 +7,9 @@ CMakeFiles/project.dir/data/data.c.obj: ../data/data.c
 CMakeFiles/project.dir/data/data.c.obj: ../data/data.h
 CMakeFiles/project.dir/data/data.c.obj: ../list.h
 
+CMakeFiles/project.dir/file/copyfile.c.obj: ../file/copyfile.c
+CMakeFiles/project.dir/file/copyfile.c.obj: ../file/copyfile.h
+
 CMakeFiles/project.dir/json/json.c.obj: ../json/json.c
 CMakeFiles/project.dir/json/json.c.obj: ../json/json.h
 
@@ -14,6 +17,7 @@ CMakeFiles/project.dir/list.c.obj: ../list.c
 CMakeFiles/project.dir/list.c.obj: ../list.h
 
 CMakeFiles/project.dir/main.c.obj: ../base64/base64.h
+CMakeFiles/project.dir/main.c.obj: ../file/copyfile.h
 CMakeFiles/project.dir/main.c.obj: ../list.h
 CMakeFiles/project.dir/main.c.obj: ../main.c
 
