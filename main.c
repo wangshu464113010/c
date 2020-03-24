@@ -11,8 +11,9 @@ int* Swap(int *a, int *b);
 extern char* base64_array;
 int main() {
     setEnCodeUTF8();
-
-    copyFile();
+    char *oldName = "../file/1.png";
+    char *newName = "../file/paste.png";
+    copyFile(oldName,newName);
 
 
    /**

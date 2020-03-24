@@ -13,9 +13,9 @@
 #define  message_for(a, b)  \
     printf(#a " and " #b ": We love you!\n")
 
-int copyFile(){
-    FILE *fp = fopen("../file/1.png","r+b");
-    FILE *f = fopen("../file/paste.png","w+b");
+void copyFile(char *oldFileName,char * newFileName){
+    FILE *fp = fopen(oldFileName,"r+b");
+    FILE *f = fopen(newFileName,"w+b");
     char buff[1024];
     int count;
     while(!feof(fp)){
@@ -26,7 +26,6 @@ int copyFile(){
     }
     fclose(fp);
     fclose(f);
-    return 0;
 }
 
 /**FILE *fp = fopen("./a.sql","r");

@@ -6,6 +6,6 @@
 #define PROJECT_COPYFILE_H
 
 
-int copyFile();
+void copyFile(char *oldFileName,char * newFileName);
 
 #endif //PROJECT_COPYFILE_H
