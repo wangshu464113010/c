@@ -284,6 +284,33 @@ main.c.s:
 	$(MAKE) -f CMakeFiles\project.dir\build.make CMakeFiles/project.dir/main.c.s
 .PHONY : main.c.s
 
+xml/xml.obj: xml/xml.c.obj
+
+.PHONY : xml/xml.obj
+
+# target to build an object file
+xml/xml.c.obj:
+	$(MAKE) -f CMakeFiles\project.dir\build.make CMakeFiles/project.dir/xml/xml.c.obj
+.PHONY : xml/xml.c.obj
+
+xml/xml.i: xml/xml.c.i
+
+.PHONY : xml/xml.i
+
+# target to preprocess a source file
+xml/xml.c.i:
+	$(MAKE) -f CMakeFiles\project.dir\build.make CMakeFiles/project.dir/xml/xml.c.i
+.PHONY : xml/xml.c.i
+
+xml/xml.s: xml/xml.c.s
+
+.PHONY : xml/xml.s
+
+# target to generate assembly for a file
+xml/xml.c.s:
+	$(MAKE) -f CMakeFiles\project.dir\build.make CMakeFiles/project.dir/xml/xml.c.s
+.PHONY : xml/xml.c.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -311,6 +338,9 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... xml/xml.obj
+	@echo ... xml/xml.i
+	@echo ... xml/xml.s
 .PHONY : help
 
 

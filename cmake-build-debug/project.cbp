@@ -107,6 +107,12 @@
 		<Unit filename="D:/workspaceforc/project/main.c">
 			<Option target="project"/>
 		</Unit>
+		<Unit filename="D:/workspaceforc/project/xml/xml.c">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="D:/workspaceforc/project/xml/xml.h">
+			<Option target="project"/>
+		</Unit>
 		<Unit filename="D:/workspaceforc/project/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

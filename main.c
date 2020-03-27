@@ -4,6 +4,7 @@
 #include "list.h"
 #include "base64/base64.h"
 #include "./file/copyfile.h"
+#include "xml/xml.h"
 void openCalc();
 void setEnCodeUTF8();
 void testLinkList();
@@ -11,9 +12,12 @@ int* Swap(int *a, int *b);
 extern char* base64_array;
 int main() {
     setEnCodeUTF8();
-    char *oldName = "../file/1.png";
+    /*char *oldName = "../file/1.png";
     char *newName = "../file/paste.png";
-    copyFile(oldName,newName);
+    copyFile(oldName,newName);*/
+    xml x ;
+    x.name="bean";
+    generate(x);
 
 
    /**
