@@ -10,25 +10,72 @@ void setEnCodeUTF8();
 void testLinkList();
 int* Swap(int *a, int *b);
 extern char* base64_array;
+struct my_s{
+    int a;int b;char c;
+};
+
 int main() {
-    setEnCodeUTF8();
-    /*char *oldName = "../file/1.png";
+    // setEnCodeUTF8();//编码问题
+    /*char *oldName = "../file/1.png"; //复制文件
     char *newName = "../file/paste.png";
     copyFile(oldName,newName);*/
-    xml x ;
+    /* xml x ;
     x.name="bean";
-    generate(x);
+    generate(x);*/
+    // testLinkList();
+    //start------------------宏container_of测试--------------------------container_of(ptr, type, member)
+    /*struct my_s* s = (struct my_s*)malloc(sizeof(struct my_s));
+    s->a = 10;s->b = 1000;
+    struct my_s* s1 = container_of(&(s->a), struct my_s, a);
+    //printf("s = %x\n",s);
+
+    //printf("s1 = %x\n",s1);
+   // printf("s1.b = %d\n",s1->b);
+
+    myList * ml1 = (myList*)malloc(sizeof(myList));
+    char* as = "12456";
+    ml1->data = as;
+    //node* list_n1= (node*)malloc(sizeof(node));
+    LIST_HEAD(node1);
+    ml1->l_node=node1;
+    printf("ml1.l_node = %x\n",&(ml1->l_node));
+    printf("node1 = %x\n",&node1);
 
 
-   /**
-    int* (*pSwap) (int *, int *);//下面定义一个函数指针，这是一个指针，指向一个返回值为int *的函数
-    int a = 99, b= 100;
-    int * c;
-    c=Swap(&a,&b);
-    pSwap=Swap;//得到这个函数的地址
-    printf("返回的数值是,a原来是99，现在是: %d\n",*c);
-    printf("返回的数值是,a原来是99，现在是: %d\n",*pSwap(&a, &b));
-    */
+    printf("ml1.data = %s\n",ml1->data);
+
+   // node node1 = ml1->l_node;
+    myList* ml2 = container_of(&ml1->l_node, struct myList, l_node);
+    printf("ml2.data = %s\n",ml2->data);*/
+
+    //end------------------宏container_of测试--------------------------container_of(ptr, type, member)
+
+    LinkList l = init();
+    char* a = "123";
+    char* b = "1234";
+    char* c = "abcdefghijkl";
+    linklist_add(l,a);
+    linklist_add(l,b);
+    linklist_add(l,c);
+    linklist_add(l,"SADFSDAGASDGsda");
+    printf("linkList[3] = %s\n",(char*)linklist_get(l,3));
+    printf("linkList[last] = %s\n",(char*)linklist_get_last(l));
+    printf("linkList[first] = %s\n",(char*)linklist_get_first(l));
+    char* delete = (char*)linklist_delete(l,1);
+    printf("delete = %s\n",delete);
+    printf("linkList[first] = %s\n",(char*)linklist_get_first(l));
+
+
+
+    /**
+     int* (*pSwap) (int *, int *);//下面定义一个函数指针，这是一个指针，指向一个返回值为int *的函数
+     int a = 99, b= 100;
+     int * c;
+     c=Swap(&a,&b);
+     pSwap=Swap;//得到这个函数的地址
+     printf("返回的数值是,a原来是99，现在是: %d\n",*c);
+     printf("返回的数值是,a原来是99，现在是: %d\n",*pSwap(&a, &b));
+     */
     /*printf("base64_array = %s\n",base64_array);
     char str[] = "123456789";
     char * s ="";

@@ -17,28 +17,56 @@
 #define LIST_HEAD(name) \
         struct list_node name = LIST_HEAD_INIT(name)
 
-typedef struct list_node{ //链表
-    struct list_node * prev;
-    struct list_node * tail;
+#define MY_LIST_INIT(a) { a.prev = &a;\
+            a.tail = &a; }
+
+typedef struct list_node{ //链表结构
+    struct list_node * prev; //前驱
+    struct list_node * tail; //后继
 } node;
 
 typedef node* Node;
 
+typedef struct myList{
+    void* data; // 数据
+   // Node node;  //前后指针
+    struct list_node l_node;
+} myList;
+typedef myList* MyList;
+
 typedef struct linkList{
-    int length;
+    int length;  //长度
     Node head;  //链表中的头节点
     Node tail;  //链表中的尾节点
+    MyList list;
 } linkList;
 typedef linkList* LinkList;
 
 
+
+MyList init_myList();
+
+
 LinkList init();
-Node init_node();
 int get_length(LinkList _linList);
+int linklist_add(LinkList  _linkList,void* newData);//默认加载最后面
+void* linklist_get(LinkList  _linkList,int i);
+void* linklist_get_last(LinkList  _linkList);
+void* linklist_get_first(LinkList  _linkList);
+
+void* linklist_delete(LinkList  _linkList,int i);
+
 int add_head(LinkList  _linkList,Node _node);
 int add_tail(LinkList  _linkList,Node _node);
 int add_new(LinkList _linkList,Node new,Node prev,Node next);//添加一个节点
 void traversal(LinkList _linkList);
 int delete_node(LinkList _linkList,Node node);
+
+
+Node init_node();
+int node_add_new(Node new,Node prev);//添加一个节点
+int node_delete(Node node);//删除一个节点
+
+
 
 #endif //PROJECT_LIST_H

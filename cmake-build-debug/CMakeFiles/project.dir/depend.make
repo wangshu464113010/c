@@ -20,4 +20,9 @@ CMakeFiles/project.dir/main.c.obj: ../base64/base64.h
 CMakeFiles/project.dir/main.c.obj: ../file/copyfile.h
 CMakeFiles/project.dir/main.c.obj: ../list.h
 CMakeFiles/project.dir/main.c.obj: ../main.c
+CMakeFiles/project.dir/main.c.obj: ../xml/xml.h
+
+CMakeFiles/project.dir/xml/xml.c.obj: ../list.h
+CMakeFiles/project.dir/xml/xml.c.obj: ../xml/xml.c
+CMakeFiles/project.dir/xml/xml.c.obj: ../xml/xml.h
 

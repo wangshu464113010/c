@@ -5,6 +5,12 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+MyList init_myList(){
+    MyList myL = (MyList)malloc(sizeof(myList));
+    myL->data = NULL;
+    return myL;
+}
+
 
 LinkList init(){
     /*List _list = (List)malloc(sizeof(struct list) * length);
@@ -18,6 +24,8 @@ LinkList init(){
     link_List->length = 0;
     link_List->tail = NULL;
     link_List->head = NULL;
+    link_List->list = NULL;
+   // link_List->list = init_myList();
    /* Node node = (Node)malloc(sizeof(node)); //LIST_HEAD_INIT(node);
     node->prev = node;
     node->tail = node;
@@ -27,13 +35,69 @@ LinkList init(){
     return link_List;
 }
 
-Node init_node(){
-    //LIST_HEAD(node_);
-    Node _node = (Node)malloc(sizeof(node)*1);
-    _node->tail = _node;
-    _node->prev = _node;
-    return _node;
+int get_length(LinkList _linkList){
+    return _linkList->length;
 }
+
+int linklist_add(LinkList  _linkList,void* newData){//默认加到最后面
+    MyList myList1 = init_myList();
+
+    myList1->data = newData;
+//    LIST_HEAD(Mylist_node);
+    MY_LIST_INIT(myList1->l_node);
+    /*myList1->l_node.prev = &myList1->l_node;
+    myList1->l_node.tail = &myList1->l_node;*/
+    Node n_p = &myList1->l_node;
+    if(_linkList->length){
+        node_add_new(n_p,_linkList->tail);
+    }else{
+        _linkList->head = n_p;
+    }
+    _linkList->tail = n_p;
+    _linkList->length++;
+    return 1;
+}
+void* linklist_get(LinkList  _linkList,int i){
+    Node node1 = _linkList->head;
+    while ( --i ){
+        node1 = node1->tail;
+    }
+    // 根据"结构体(type)变量"中的"域成员变量(member)的指针(ptr)"来获取指向整个结构体变量的指针
+    //#define container_of(ptr, type, member)
+    MyList l =  container_of(node1, struct myList ,l_node);
+    return l->data;
+}
+void* linklist_get_last(LinkList  _linkList){
+    return container_of(_linkList->tail, struct myList ,l_node)->data;
+}
+void* linklist_get_first(LinkList  _linkList){
+    return container_of(_linkList->head, struct myList ,l_node)->data;
+}
+void* linklist_delete(LinkList  _linkList,int i){
+    void* _data = NULL;
+    if(i == 1){
+        MyList l = container_of(_linkList->head, struct myList ,l_node);
+        _data = l->data;
+        if(_linkList->length == 1){
+            _linkList->head = NULL;
+            _linkList->tail = NULL;
+        }else{
+            _linkList->head = _linkList->head->tail;
+        }
+        free(l);
+    }else if(i == _linkList->length){
+
+    }else{
+        Node node1 = _linkList->head;
+        while ( --i ){
+            node1 = node1->tail;
+        }
+        node_delete(node1);
+    }
+    _linkList->length--;
+    return _data;
+}
+
 
 int add_head(LinkList  _linkList,Node _node){
     int i = add_new(_linkList,_node,NULL,_linkList->head);
@@ -69,9 +133,7 @@ int add_new(LinkList _linkList,Node new,Node prev,Node next){
     _linkList->length++;
     return 1;
 }
-int get_length(LinkList _linkList){
-    return _linkList->length;
-}
+
 void traversal(LinkList _linkList){
     if(_linkList == NULL || _linkList->length == 0){
         printf("链表为空或长度为0\n");
@@ -120,4 +182,35 @@ int delete_node(LinkList _linkList,Node node){
         node1 = node1->tail;
     }
     return -1;//未找到元素
+}
+
+// Node
+Node init_node(){
+    //LIST_HEAD(node_);
+    Node _node = (Node)malloc(sizeof(node)*1);
+    _node->tail = NULL;
+    _node->prev = NULL;
+    return _node;
+}
+
+int node_add_new(Node new,Node prev){//节点后添加一个新的节点
+    Node next = prev->tail;//获取prev的后继  prev -> new -> next
+    if(next != prev){ //prev不是尾节点
+        new->tail = next;
+        next->prev = new;
+    }
+    new->prev = prev;
+    prev->tail = new;
+    return 1;
+}
+
+int node_delete(Node _node){
+
+    Node _next = _node->tail;//获取prev的后继  _prev -> _node -> _next
+    Node _prev = _node->prev;
+    _prev->tail = _next;
+    _next->prev = _prev;
+    Node n = _node;
+    free(n);
+    return 1;
 }
