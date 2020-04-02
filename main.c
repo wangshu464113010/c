@@ -15,7 +15,7 @@ struct my_s{
 };
 
 int main() {
-    // setEnCodeUTF8();//编码问题
+     setEnCodeUTF8();//编码问题
     /*char *oldName = "../file/1.png"; //复制文件
     char *newName = "../file/paste.png";
     copyFile(oldName,newName);*/
@@ -51,19 +51,62 @@ int main() {
     //end------------------宏container_of测试--------------------------container_of(ptr, type, member)
 
     LinkList l = init();
-    char* a = "123";
-    char* b = "1234";
+    char* a = "打扫房间时空裂缝进口量";
+    char* b = "你哈奥";
     char* c = "abcdefghijkl";
     linklist_add(l,a);
     linklist_add(l,b);
     linklist_add(l,c);
     linklist_add(l,"SADFSDAGASDGsda");
-    printf("linkList[3] = %s\n",(char*)linklist_get(l,3));
-    printf("linkList[last] = %s\n",(char*)linklist_get_last(l));
+    /*linklist_add_first(l,"aa");
+    linklist_add_first(l,"vd");
+    linklist_add_first(l,"v4");
+    linklist_add_first(l,"v3");
+    linklist_add_first(l,"v2");
+    linklist_add_first(l,"v1");*/
+   // printf("linkList[last] = %s\n",(char*)linklist_get_last(l));
+    linklist_add_last(l,"last1");
+   // printf("linkList[last] = %s\n",(char*)linklist_get_last(l));
+    linklist_add_last(l,"last2");
+   // printf("linkList[last] = %s\n",(char*)linklist_get_last(l));
+    linklist_add_last(l,"last3");
+  //  printf("linkList[last] = %s\n",(char*)linklist_get_last(l));
+    linklist_add_last(l,"last3");
+   /* printf("linkList[13] = %s\n",(char*)linklist_get(l,13));
+    printf("linkList[14] = %s\n",(char*)linklist_get(l,14));*/
+  //  printf("linkList[2] = %s\n",(char*)linklist_get(l,2));
+    linklist_add_index(l,"123456",0);
+  //  printf("linkList[5] = %s\n",(char*)linklist_get(l,5));
+  //  printf("linkList[6] = %s\n",(char*)linklist_get(l,6));
+
+
+    /*linklist_add(l,"必定粉红色的积分卡仕达");
+    linklist_add(l,"q");
+    linklist_add(l,"a");
+    linklist_add(l,"z");
+    linklist_add(l,"w");//9
+    linklist_add(l,"s");
+    linklist_add(l,"必定粉红色的积分1");*/
+    Node n = l->head;
+    int j = 0;
+    while (n){
+        n = n->tail;
+        ++j;
+    }
+    printf(" j = %d\n",j);
+
+ //   printf("linkList[1] = %s\n",(char*)linklist_get(l,1));
+  //  printf("linkList[3] = %s\n",(char*)linklist_get(l,3));
+    printf(" length = %d\n",get_length(l));
+   // printf("linkList[11] = %s\n",(char*)linklist_get(l,11));
+ //   printf("linkList[last] = %s\n",(char*)linklist_get_last(l));
+  //  printf("linkList[first] = %s\n",(char*)linklist_get_first(l));
+     char* delete = (char*)linklist_delete(l,3);
+     printf("delete = %s\n",delete);
     printf("linkList[first] = %s\n",(char*)linklist_get_first(l));
-    char* delete = (char*)linklist_delete(l,1);
-    printf("delete = %s\n",delete);
-    printf("linkList[first] = %s\n",(char*)linklist_get_first(l));
+  //  char* delete = (char*)linklist_delete(l,1);
+  //  printf("delete = %s\n",delete);
+//    printf("linkList[first] = %s\n",(char*)linklist_get_first(l));
 
 
 

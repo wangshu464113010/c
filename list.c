@@ -38,29 +38,75 @@ LinkList init(){
 int get_length(LinkList _linkList){
     return _linkList->length;
 }
-
-int linklist_add(LinkList  _linkList,void* newData){//默认加到最后面
+int linklist_add_index(LinkList  _linkList,void* _newData,int _index){
+    //初始化节点
     MyList myList1 = init_myList();
-
-    myList1->data = newData;
-//    LIST_HEAD(Mylist_node);
-    MY_LIST_INIT(myList1->l_node);
-    /*myList1->l_node.prev = &myList1->l_node;
-    myList1->l_node.tail = &myList1->l_node;*/
+    myList1->data = _newData;
+    NODE_INIT_NULL(myList1->l_node);
     Node n_p = &myList1->l_node;
-    if(_linkList->length){
-        node_add_new(n_p,_linkList->tail);
+
+    if(_index <= 1){//_index <= 1 ，添加在第一个
+        if(_linkList->length){
+            node_add_node_prev_new(n_p,_linkList->head);
+        }else{//链表长度为0
+            _linkList->tail = n_p;
+        }
+        _linkList->head = n_p;
+    }else if (_index >= _linkList->length){//_index >= length时，添加在最后面
+        if(_linkList->length){//判断长度是否为0
+            node_add_node_next_new(n_p,_linkList->tail);//默认加到最后面
+        }else{//如果链表长度是0
+            _linkList->head = n_p;
+        }
+        _linkList->tail = n_p;
     }else{
+        Node node1 = node_offsetof(_linkList->head,_linkList->tail,_index,_linkList->length);//找到第_index 节点
+        node_add_node_prev_new(n_p,node1);//添加在第 _index 节点的前面
+    }
+    _linkList->length++;
+    return 1;
+}
+int linklist_add_first(LinkList  _linkList,void* _newData) {
+    return linklist_add_index(_linkList, _newData,1);;
+}
+int linklist_add_last(LinkList  _linkList,void* _newData) {
+    return linklist_add(_linkList, _newData);
+}
+int linklist_add(LinkList  _linkList,void* _newData){
+    MyList myList1 = init_myList();
+    myList1->data = _newData;
+//    LIST_HEAD(Mylist_node);
+//    MY_LIST_INIT(myList1->l_node);
+    NODE_INIT_NULL(myList1->l_node);
+
+    Node n_p = &myList1->l_node;
+    if(_linkList->length){//判断长度是否为0
+        node_add_node_next_new(n_p,_linkList->tail);//默认加到最后面
+    }else{//如果链表长度是0
         _linkList->head = n_p;
     }
     _linkList->tail = n_p;
     _linkList->length++;
     return 1;
 }
-void* linklist_get(LinkList  _linkList,int i){
-    Node node1 = _linkList->head;
-    while ( --i ){
-        node1 = node1->tail;
+void* linklist_get(LinkList  _linkList,int _i){
+    if(_i <= 1){
+        return linklist_get_first(_linkList);
+    }
+    if(_i >= _linkList->length){
+        return linklist_get_last(_linkList);
+    }
+    Node node1 ;//= node_offsetof(_linkList->head,_linkList->tail,_i,_linkList->length);// = _linkList->head;
+    if(_i <= _linkList->length>>1){
+        node1 = _linkList->head;
+        while ( --_i ){
+            node1 = node1->tail;
+        }
+    }else{
+        node1 = _linkList->tail;
+        while ( _linkList->length - _i++ ){
+            node1 = node1->prev;
+        }
     }
     // 根据"结构体(type)变量"中的"域成员变量(member)的指针(ptr)"来获取指向整个结构体变量的指针
     //#define container_of(ptr, type, member)
@@ -86,13 +132,13 @@ void* linklist_delete(LinkList  _linkList,int i){
         }
         free(l);
     }else if(i == _linkList->length){
-
+        MyList l = container_of(_linkList->tail, struct myList ,l_node);
     }else{
-        Node node1 = _linkList->head;
-        while ( --i ){
-            node1 = node1->tail;
-        }
+        Node node1 = node_offsetof(_linkList->head,_linkList->tail,i,_linkList->length);//i 节点
+        MyList l = container_of(node1, struct myList ,l_node);
+        _data = l->data;
         node_delete(node1);
+        free(l);
     }
     _linkList->length--;
     return _data;
@@ -192,16 +238,49 @@ Node init_node(){
     _node->prev = NULL;
     return _node;
 }
-
-int node_add_new(Node new,Node prev){//节点后添加一个新的节点
-    Node next = prev->tail;//获取prev的后继  prev -> new -> next
-    if(next != prev){ //prev不是尾节点
-        new->tail = next;
-        next->prev = new;
+int node_add_node_prev_new(Node _new,Node _tail) {//_prev节点前添加一个节点
+    Node prev = _tail->prev;//获取prev的前驱  prev -> new -> _tail
+    if(prev){ //prev不是头节点
+        _new->prev = prev;
+        prev->tail = _new;
     }
-    new->prev = prev;
-    prev->tail = new;
+    _new->tail = _tail;
+    _tail->prev = _new;
     return 1;
+}
+
+int node_add_node_next_new(Node _new,Node _prev){//节点后添加一个新的节点
+    Node next = _prev->tail;//获取prev的后继  _prev -> new -> next
+    if(next){ //prev不是尾节点
+        _new->tail = next;
+        next->prev = _new;
+    }
+    _new->prev = _prev;
+    _prev->tail = _new;
+    return 1;
+}
+/**
+ *
+ * @param _prev 链表头节点
+ * @param _tail 链表尾节点
+ * @param _i    位置
+ * @param _length  链表的长度
+ * @return 链表的第_i个节点
+ */
+Node node_offsetof(Node _prev,Node _tail,int _i,int _length){//寻找链表中的第 _i 个位置的节点
+    Node node1;
+    if(_i <= _length>>1){
+        node1 = _prev;
+        while ( --_i ){
+            node1 = node1->tail;
+        }
+    }else{
+        node1 = _tail;
+        while ( _length - _i++ ){
+            node1 = node1->prev;
+        }
+    }
+    return node1;
 }
 
 int node_delete(Node _node){
@@ -210,7 +289,7 @@ int node_delete(Node _node){
     Node _prev = _node->prev;
     _prev->tail = _next;
     _next->prev = _prev;
-    Node n = _node;
-    free(n);
+    /*Node n = _node;
+    free(n);*/
     return 1;
 }
