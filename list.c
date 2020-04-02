@@ -119,9 +119,11 @@ void* linklist_get_last(LinkList  _linkList){
 void* linklist_get_first(LinkList  _linkList){
     return container_of(_linkList->head, struct myList ,l_node)->data;
 }
-void* linklist_delete(LinkList  _linkList,int i){
+void* linklist_delete(LinkList  _linkList,int _i){
     void* _data = NULL;
-    if(i == 1){
+    if(_i < 1 || _i > _linkList->length){
+        return -1;
+    }else if(_i == 1){//第一个元素
         MyList l = container_of(_linkList->head, struct myList ,l_node);
         _data = l->data;
         if(_linkList->length == 1){
@@ -129,12 +131,22 @@ void* linklist_delete(LinkList  _linkList,int i){
             _linkList->tail = NULL;
         }else{
             _linkList->head = _linkList->head->tail;
+            _linkList->head->prev = NULL;
         }
         free(l);
-    }else if(i == _linkList->length){
+    }else if(_i == _linkList->length){//最后一个元素
         MyList l = container_of(_linkList->tail, struct myList ,l_node);
+        _data = l->data;
+        if(_linkList->length == 1){
+            _linkList->head = NULL;
+            _linkList->tail = NULL;
+        }else{
+            _linkList->tail = _linkList->tail->prev;
+            _linkList->tail->tail = NULL;
+        }
+        free(l);
     }else{
-        Node node1 = node_offsetof(_linkList->head,_linkList->tail,i,_linkList->length);//i 节点
+        Node node1 = node_offsetof(_linkList->head,_linkList->tail,_i,_linkList->length);//i 节点
         MyList l = container_of(node1, struct myList ,l_node);
         _data = l->data;
         node_delete(node1);
@@ -284,7 +296,6 @@ Node node_offsetof(Node _prev,Node _tail,int _i,int _length){//寻找链表中�
 }
 
 int node_delete(Node _node){
-
     Node _next = _node->tail;//获取prev的后继  _prev -> _node -> _next
     Node _prev = _node->prev;
     _prev->tail = _next;

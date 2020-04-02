@@ -69,9 +69,8 @@ int main() {
    // printf("linkList[last] = %s\n",(char*)linklist_get_last(l));
     linklist_add_last(l,"last2");
    // printf("linkList[last] = %s\n",(char*)linklist_get_last(l));
-    linklist_add_last(l,"last3");
   //  printf("linkList[last] = %s\n",(char*)linklist_get_last(l));
-    linklist_add_last(l,"last3");
+
    /* printf("linkList[13] = %s\n",(char*)linklist_get(l,13));
     printf("linkList[14] = %s\n",(char*)linklist_get(l,14));*/
   //  printf("linkList[2] = %s\n",(char*)linklist_get(l,2));
@@ -87,23 +86,26 @@ int main() {
     linklist_add(l,"w");//9
     linklist_add(l,"s");
     linklist_add(l,"必定粉红色的积分1");*/
-    Node n = l->head;
+  /*  Node n = l->head;
     int j = 0;
     while (n){
         n = n->tail;
         ++j;
     }
-    printf(" j = %d\n",j);
+    printf(" j = %d\n",j);*/
 
  //   printf("linkList[1] = %s\n",(char*)linklist_get(l,1));
   //  printf("linkList[3] = %s\n",(char*)linklist_get(l,3));
+    linklist_add_last(l,"last3");
     printf(" length = %d\n",get_length(l));
-   // printf("linkList[11] = %s\n",(char*)linklist_get(l,11));
- //   printf("linkList[last] = %s\n",(char*)linklist_get_last(l));
-  //  printf("linkList[first] = %s\n",(char*)linklist_get_first(l));
      char* delete = (char*)linklist_delete(l,3);
-     printf("delete = %s\n",delete);
-    printf("linkList[first] = %s\n",(char*)linklist_get_first(l));
+    char* delete2 = (char*)linklist_delete(l,get_length(l));
+
+    printf("delete = %s\n",delete);
+    printf("delete2 = %s\n",delete2);
+    printf(" length = %d\n",get_length(l));
+
+    printf("linkList[last] = %s\n",(char*)linklist_get_last(l));
   //  char* delete = (char*)linklist_delete(l,1);
   //  printf("delete = %s\n",delete);
 //    printf("linkList[first] = %s\n",(char*)linklist_get_first(l));
