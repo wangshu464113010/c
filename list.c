@@ -122,7 +122,7 @@ void* linklist_get_first(LinkList  _linkList){
 void* linklist_delete(LinkList  _linkList,int _i){
     void* _data = NULL;
     if(_i < 1 || _i > _linkList->length){
-        return -1;
+        return NULL;
     }else if(_i == 1){//第一个元素
         MyList l = container_of(_linkList->head, struct myList ,l_node);
         _data = l->data;
