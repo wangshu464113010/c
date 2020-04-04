@@ -20,7 +20,7 @@ char* generate(xml x);
 
 XML xml_init(char* _name);
 XML xml_create_root(char* _name);
-XML xml_add_children(XML _xml,char* _name);
+XML xml_add_children(XML _father,char* _name);
 
 
 

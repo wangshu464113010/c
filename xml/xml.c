@@ -34,16 +34,16 @@ XML xml_init(char* _name){
 XML xml_create_root(char* _name){
     return xml_init(_name);
 }
-XML xml_add_children(XML _xml,char* _name){
+XML xml_add_children(XML _father,char* _name){
     XML _xml_children_ = xml_init(_name);
-    if(!_xml->children){
-        _xml->children = init();
+    if(!_father->children){
+        _father->children = init();
     }
-    if(!get_length(_xml->children)){
-        linklist_add_first(_xml->children,_xml_children_);
+    if(!get_length(_father->children)){
+        linklist_add_first(_father->children,_xml_children_);
     }else{
-        linklist_add_last(_xml->children,_xml_children_);
+        linklist_add_last(_father->children,_xml_children_);
     }
-    return _xml;
+    return _father;
 }
 
