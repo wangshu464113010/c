@@ -14,6 +14,12 @@ struct my_s{
     int a;int b;char c;
 };
 
+
+void testmain() {
+    int string = system("systeminfo");
+    printf("-------------------------------------------------------\n");
+    printf("%d\n",string);
+}
 int main() {
      setEnCodeUTF8();//编码问题
     /*char *oldName = "../file/1.png"; //复制文件
@@ -110,7 +116,10 @@ int main() {
   //  printf("delete = %s\n",delete);
 //    printf("linkList[first] = %s\n",(char*)linklist_get_first(l));
 
-
+    XML xml = xml_create_root("beans");
+    xml_add_children(xml,"bean");
+    printf("xml = %s\n",(char*)xml->name);
+    printf("xml children = %s\n",((XML)linklist_get_first(xml->children))->name);
 
     /**
      int* (*pSwap) (int *, int *);//下面定义一个函数指针，这是一个指针，指向一个返回值为int *的函数
@@ -140,14 +149,15 @@ void openCalc(){
     system("calc");
 }
 void setEnCodeUTF8(){
-/*#ifdef __WIN32__
-    printf("32 windows\n");
-    system("CHCP 65001");//936==GBK,65001==UTF-8
-#endif*/
-#ifdef __WIN64__
-    //printf("64 windows\n");
+#ifdef __WIN32__
+    //printf("32 windows\n");
     system("CHCP 65001");//936==GBK,65001==UTF-8
 #endif
+#ifdef __WIN64__
+   // printf("64 windows\n");
+    system("CHCP 65001");//936==GBK,65001==UTF-8
+#endif
+
 }
 void testLinkList(){
     LinkList l = init();
