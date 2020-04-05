@@ -54,8 +54,8 @@ typedef linkList* LinkList;
 MyList init_myList();
 
 
-LinkList init();
-int get_length(LinkList _linList);
+LinkList linklist_init();
+int linklist_get_length(LinkList _linList);
 int linklist_add_first(LinkList  _linkList,void* _newData);//添加在第一个位置
 int linklist_add_last(LinkList  _linkList,void* _newData);//添加在最后
 int linklist_add_index(LinkList  _linkList,void* _newData,int _index);//添加在第 _index 位置

@@ -10,6 +10,7 @@ char* generate(xml x){
         exit(0);
     }
     strcpy(s,"<");
+    strcpy(s,"<");
     strcat(s,x.name);
     if(!x.attributes){
         strcat(s," ");
@@ -39,7 +40,7 @@ XML xml_add_children(XML _father,char* _name){
     if(!_father->children){
         _father->children = init();
     }
-    if(!get_length(_father->children)){
+    if(!linklist_get_length(_father->children)){
         linklist_add_first(_father->children,_xml_children_);
     }else{
         linklist_add_last(_father->children,_xml_children_);

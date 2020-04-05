@@ -103,13 +103,13 @@ int main() {
  //   printf("linkList[1] = %s\n",(char*)linklist_get(l,1));
   //  printf("linkList[3] = %s\n",(char*)linklist_get(l,3));
     linklist_add_last(l,"last3");
-    printf(" length = %d\n",get_length(l));
+    printf(" length = %d\n",linklist_get_length(l));
      char* delete = (char*)linklist_delete(l,3);
-    char* delete2 = (char*)linklist_delete(l,get_length(l));
+    char* delete2 = (char*)linklist_delete(l,linklist_get_length(l));
 
     printf("delete = %s\n",delete);
     printf("delete2 = %s\n",delete2);
-    printf(" length = %d\n",get_length(l));
+    printf(" length = %d\n",linklist_get_length(l));
 
     printf("linkList[last] = %s\n",(char*)linklist_get_last(l));
   //  char* delete = (char*)linklist_delete(l,1);
@@ -168,11 +168,11 @@ void testLinkList(){
     add_head(l,node1);
     add_tail(l,node2);
     add_tail(l,node3);
-    printf("链表的长度 = %d\n",get_length(l));
+    printf("链表的长度 = %d\n",linklist_get_length(l));
     traversal(l);
     delete_node(l,node3);
     printf("node1 = %#x \n",node3);
-    printf("链表的长度 = %d\n",get_length(l));
+    printf("链表的长度 = %d\n",linklist_get_length(l));
     traversal(l);
     printf("offsetof = %d\n",offsetof(linkList,length));
 

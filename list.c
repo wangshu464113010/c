@@ -12,7 +12,7 @@ MyList init_myList(){
 }
 
 
-LinkList init(){
+LinkList linklist_init(){
     /*List _list = (List)malloc(sizeof(struct list) * length);
     _list->prev = NULL;
     _list->tail = NULL;
@@ -35,7 +35,7 @@ LinkList init(){
     return link_List;
 }
 
-int get_length(LinkList _linkList){
+int linklist_get_length(LinkList _linkList){
     return _linkList->length;
 }
 int linklist_add_index(LinkList  _linkList,void* _newData,int _index){

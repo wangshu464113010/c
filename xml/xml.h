@@ -16,7 +16,7 @@ typedef struct xml{
 }xml;
 typedef xml* XML;
 
-char* generate(xml x);
+char* generate(xml _x);
 
 XML xml_init(char* _name);
 XML xml_create_root(char* _name);
