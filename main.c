@@ -16,9 +16,9 @@ struct my_s{
 
 
 void testmain() {
-    int string = system("systeminfo");
-    printf("-------------------------------------------------------\n");
-    printf("%d\n",string);
+     int string = system("systeminfo");
+     printf("-------------------------------------------------------\n");
+     printf("%d\n",string);
 }
 int main() {
      setEnCodeUTF8();//编码问题
@@ -56,7 +56,7 @@ int main() {
 
     //end------------------宏container_of测试--------------------------container_of(ptr, type, member)
 
-    LinkList l = init();
+    LinkList l = linklist_init();
     char* a = "打扫房间时空裂缝进口量";
     char* b = "你哈奥";
     char* c = "abcdefghijkl";
@@ -160,7 +160,7 @@ void setEnCodeUTF8(){
 
 }
 void testLinkList(){
-    LinkList l = init();
+    LinkList l = linklist_init();
     Node node1 = init_node();
     Node node2 = init_node();
     Node node3 = init_node();

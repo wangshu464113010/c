@@ -24,7 +24,6 @@ LinkList linklist_init(){
     link_List->length = 0;
     link_List->tail = NULL;
     link_List->head = NULL;
-    link_List->list = NULL;
    // link_List->list = init_myList();
    /* Node node = (Node)malloc(sizeof(node)); //LIST_HEAD_INIT(node);
     node->prev = node;

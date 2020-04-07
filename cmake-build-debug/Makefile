@@ -284,6 +284,60 @@ main.c.s:
 	$(MAKE) -f CMakeFiles\project.dir\build.make CMakeFiles/project.dir/main.c.s
 .PHONY : main.c.s
 
+map/map.obj: map/map.c.obj
+
+.PHONY : map/map.obj
+
+# target to build an object file
+map/map.c.obj:
+	$(MAKE) -f CMakeFiles\project.dir\build.make CMakeFiles/project.dir/map/map.c.obj
+.PHONY : map/map.c.obj
+
+map/map.i: map/map.c.i
+
+.PHONY : map/map.i
+
+# target to preprocess a source file
+map/map.c.i:
+	$(MAKE) -f CMakeFiles\project.dir\build.make CMakeFiles/project.dir/map/map.c.i
+.PHONY : map/map.c.i
+
+map/map.s: map/map.c.s
+
+.PHONY : map/map.s
+
+# target to generate assembly for a file
+map/map.c.s:
+	$(MAKE) -f CMakeFiles\project.dir\build.make CMakeFiles/project.dir/map/map.c.s
+.PHONY : map/map.c.s
+
+tree/binary_tree.obj: tree/binary_tree.c.obj
+
+.PHONY : tree/binary_tree.obj
+
+# target to build an object file
+tree/binary_tree.c.obj:
+	$(MAKE) -f CMakeFiles\project.dir\build.make CMakeFiles/project.dir/tree/binary_tree.c.obj
+.PHONY : tree/binary_tree.c.obj
+
+tree/binary_tree.i: tree/binary_tree.c.i
+
+.PHONY : tree/binary_tree.i
+
+# target to preprocess a source file
+tree/binary_tree.c.i:
+	$(MAKE) -f CMakeFiles\project.dir\build.make CMakeFiles/project.dir/tree/binary_tree.c.i
+.PHONY : tree/binary_tree.c.i
+
+tree/binary_tree.s: tree/binary_tree.c.s
+
+.PHONY : tree/binary_tree.s
+
+# target to generate assembly for a file
+tree/binary_tree.c.s:
+	$(MAKE) -f CMakeFiles\project.dir\build.make CMakeFiles/project.dir/tree/binary_tree.c.s
+.PHONY : tree/binary_tree.c.s
+
 xml/xml.obj: xml/xml.c.obj
 
 .PHONY : xml/xml.obj
@@ -338,6 +392,12 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... map/map.obj
+	@echo ... map/map.i
+	@echo ... map/map.s
+	@echo ... tree/binary_tree.obj
+	@echo ... tree/binary_tree.i
+	@echo ... tree/binary_tree.s
 	@echo ... xml/xml.obj
 	@echo ... xml/xml.i
 	@echo ... xml/xml.s

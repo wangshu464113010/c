@@ -10,6 +10,8 @@ set(CMAKE_DEPENDS_CHECK_C
   "D:/workspaceforc/project/json/json.c" "D:/workspaceforc/project/cmake-build-debug/CMakeFiles/project.dir/json/json.c.obj"
   "D:/workspaceforc/project/list.c" "D:/workspaceforc/project/cmake-build-debug/CMakeFiles/project.dir/list.c.obj"
   "D:/workspaceforc/project/main.c" "D:/workspaceforc/project/cmake-build-debug/CMakeFiles/project.dir/main.c.obj"
+  "D:/workspaceforc/project/map/map.c" "D:/workspaceforc/project/cmake-build-debug/CMakeFiles/project.dir/map/map.c.obj"
+  "D:/workspaceforc/project/tree/binary_tree.c" "D:/workspaceforc/project/cmake-build-debug/CMakeFiles/project.dir/tree/binary_tree.c.obj"
   "D:/workspaceforc/project/xml/xml.c" "D:/workspaceforc/project/cmake-build-debug/CMakeFiles/project.dir/xml/xml.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")

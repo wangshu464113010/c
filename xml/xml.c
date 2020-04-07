@@ -38,7 +38,7 @@ XML xml_create_root(char* _name){
 XML xml_add_children(XML _father,char* _name){
     XML _xml_children_ = xml_init(_name);
     if(!_father->children){
-        _father->children = init();
+        _father->children = linklist_init();
     }
     if(!linklist_get_length(_father->children)){
         linklist_add_first(_father->children,_xml_children_);

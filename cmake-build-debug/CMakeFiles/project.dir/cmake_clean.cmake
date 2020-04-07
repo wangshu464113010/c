@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/project.dir/json/json.c.obj"
   "CMakeFiles/project.dir/list.c.obj"
   "CMakeFiles/project.dir/main.c.obj"
+  "CMakeFiles/project.dir/map/map.c.obj"
+  "CMakeFiles/project.dir/tree/binary_tree.c.obj"
   "CMakeFiles/project.dir/xml/xml.c.obj"
   "libproject.dll.a"
   "project.exe"

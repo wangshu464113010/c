@@ -45,7 +45,6 @@ typedef struct linkList{
     int length;  //长度
     Node head;  //链表中的头节点
     Node tail;  //链表中的尾节点
-    MyList list;
 } linkList;
 typedef linkList* LinkList;
 

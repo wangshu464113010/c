@@ -107,6 +107,18 @@
 		<Unit filename="D:/workspaceforc/project/main.c">
 			<Option target="project"/>
 		</Unit>
+		<Unit filename="D:/workspaceforc/project/map/map.c">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="D:/workspaceforc/project/map/map.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="D:/workspaceforc/project/tree/binary_tree.c">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="D:/workspaceforc/project/tree/binary_tree.h">
+			<Option target="project"/>
+		</Unit>
 		<Unit filename="D:/workspaceforc/project/xml/xml.c">
 			<Option target="project"/>
 		</Unit>
