@@ -13,7 +13,7 @@ MAP map_init(){
     _map_->equal = map_default_equal;
     _map_->hash_code = map_default_hashcode;
 
-    _map_->node = (ENTRY)malloc(sizeof(entry) * MAP_DEFAULT_SIZE);
+    _map_->node = (ENTRY)calloc(MAP_DEFAULT_SIZE*32,sizeof(entry));
     _map_->node_length = MAP_DEFAULT_SIZE;
     _map_->length = 0;
     return _map_;
@@ -21,7 +21,7 @@ MAP map_init(){
 
 MAP map_init_withFun(int (*_hash_code)(void* _key),int (*_equal)(void* _key1,void* _key2)){
     MAP _map_ = (MAP)malloc(sizeof(struct map));
-    _map_->node = (ENTRY)malloc(sizeof(entry) * MAP_DEFAULT_SIZE);
+    _map_->node = (ENTRY)calloc(MAP_DEFAULT_SIZE*32,sizeof(entry));
     _map_->node_length = MAP_DEFAULT_SIZE;
     _map_->equal = _equal;
     _map_->hash_code = _hash_code;
@@ -30,8 +30,9 @@ MAP map_init_withFun(int (*_hash_code)(void* _key),int (*_equal)(void* _key1,voi
 }
 int map_put(MAP _map,void* _key,void* _value){
     int _keyHashCode = _map->hash_code(_key);
-    if(_keyHashCode)
-        return 1;
+    ENTRY entry = &_map->node[_keyHashCode];
+
+    return 1;
 }
 int map_get(MAP _map,void* _key){
     return 1;
