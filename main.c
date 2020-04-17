@@ -5,6 +5,8 @@
 #include "base64/base64.h"
 #include "./file/copyfile.h"
 #include "xml/xml.h"
+#include "./thread/mythread.h"
+#include "./map/arrayMap.h"
 void openCalc();
 void setEnCodeUTF8();
 void testLinkList();
@@ -20,6 +22,13 @@ void testmain() {
      printf("-------------------------------------------------------\n");
      printf("%d\n",string);
 }
+void main1(){
+    setEnCodeUTF8();//编码问题
+
+    first_demo();
+    return;
+}
+
 int main() {
      setEnCodeUTF8();//编码问题
     /*char *oldName = "../file/1.png"; //复制文件
@@ -115,11 +124,22 @@ int main() {
   //  char* delete = (char*)linklist_delete(l,1);
   //  printf("delete = %s\n",delete);
 //    printf("linkList[first] = %s\n",(char*)linklist_get_first(l));
-
+/** 测试xml */
     XML xml = xml_create_root("beans");
     xml_add_children(xml,"bean");
-    printf("xml = %s\n",(char*)xml->name);
-    printf("xml children = %s\n",((XML)linklist_get_first(xml->children))->name);
+    xml_add_attribute(xml,"abc","123456");
+/*    printf("xml = %s\n",(char*)xml->name);
+    printf("xml children = %s\n",((XML)linklist_get_first(xml->children))->name);*/
+ /**  测试map集合   */
+    ARRAY_MAP am = arrayMap_init();
+    arrayMap_put(am,"123","456");
+    arrayMap_put(am,"123","4567");
+    arrayMap_put(am,"1231","v没事的v看");
+
+    //ARRAY_ENTRY q = (ARRAY_ENTRY)linklist_get(am->data[4].list,1);
+  //  printf("key = %s ,value = %s\n",(char*)q->key,(char*)q->value);
+    printf("value = %s\n",(char*)arrayMap_get(am,"123"));
+    printf("value = %s\n",(char*)arrayMap_get(am,"1231"));
 
     /**
      int* (*pSwap) (int *, int *);//下面定义一个函数指针，这是一个指针，指向一个返回值为int *的函数

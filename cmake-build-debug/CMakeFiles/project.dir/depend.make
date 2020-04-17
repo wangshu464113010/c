@@ -20,12 +20,25 @@ CMakeFiles/project.dir/main.c.obj: ../base64/base64.h
 CMakeFiles/project.dir/main.c.obj: ../file/copyfile.h
 CMakeFiles/project.dir/main.c.obj: ../list.h
 CMakeFiles/project.dir/main.c.obj: ../main.c
+CMakeFiles/project.dir/main.c.obj: ../map/arrayMap.h
+CMakeFiles/project.dir/main.c.obj: ../thread/mythread.h
 CMakeFiles/project.dir/main.c.obj: ../xml/xml.h
 
+CMakeFiles/project.dir/map/arrayMap.c.obj: ../list.h
+CMakeFiles/project.dir/map/arrayMap.c.obj: ../map/arrayMap.c
+CMakeFiles/project.dir/map/arrayMap.c.obj: ../map/arrayMap.h
+
+CMakeFiles/project.dir/map/map.c.obj: ../list.h
 CMakeFiles/project.dir/map/map.c.obj: ../map/map.c
 CMakeFiles/project.dir/map/map.c.obj: ../map/map.h
 
+CMakeFiles/project.dir/thread/mythread.c.obj: ../thread/mythread.c
+CMakeFiles/project.dir/thread/mythread.c.obj: ../thread/mythread.h
+
+CMakeFiles/project.dir/tree/binary_tree.c.obj: ../tree/binary_tree.c
+
 CMakeFiles/project.dir/xml/xml.c.obj: ../list.h
+CMakeFiles/project.dir/xml/xml.c.obj: ../map/arrayMap.h
 CMakeFiles/project.dir/xml/xml.c.obj: ../xml/xml.c
 CMakeFiles/project.dir/xml/xml.c.obj: ../xml/xml.h
 

@@ -107,10 +107,22 @@
 		<Unit filename="D:/workspaceforc/project/main.c">
 			<Option target="project"/>
 		</Unit>
+		<Unit filename="D:/workspaceforc/project/map/arrayMap.c">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="D:/workspaceforc/project/map/arrayMap.h">
+			<Option target="project"/>
+		</Unit>
 		<Unit filename="D:/workspaceforc/project/map/map.c">
 			<Option target="project"/>
 		</Unit>
 		<Unit filename="D:/workspaceforc/project/map/map.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="D:/workspaceforc/project/thread/mythread.c">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="D:/workspaceforc/project/thread/mythread.h">
 			<Option target="project"/>
 		</Unit>
 		<Unit filename="D:/workspaceforc/project/tree/binary_tree.c">

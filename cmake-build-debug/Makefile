@@ -284,6 +284,33 @@ main.c.s:
 	$(MAKE) -f CMakeFiles\project.dir\build.make CMakeFiles/project.dir/main.c.s
 .PHONY : main.c.s
 
+map/arrayMap.obj: map/arrayMap.c.obj
+
+.PHONY : map/arrayMap.obj
+
+# target to build an object file
+map/arrayMap.c.obj:
+	$(MAKE) -f CMakeFiles\project.dir\build.make CMakeFiles/project.dir/map/arrayMap.c.obj
+.PHONY : map/arrayMap.c.obj
+
+map/arrayMap.i: map/arrayMap.c.i
+
+.PHONY : map/arrayMap.i
+
+# target to preprocess a source file
+map/arrayMap.c.i:
+	$(MAKE) -f CMakeFiles\project.dir\build.make CMakeFiles/project.dir/map/arrayMap.c.i
+.PHONY : map/arrayMap.c.i
+
+map/arrayMap.s: map/arrayMap.c.s
+
+.PHONY : map/arrayMap.s
+
+# target to generate assembly for a file
+map/arrayMap.c.s:
+	$(MAKE) -f CMakeFiles\project.dir\build.make CMakeFiles/project.dir/map/arrayMap.c.s
+.PHONY : map/arrayMap.c.s
+
 map/map.obj: map/map.c.obj
 
 .PHONY : map/map.obj
@@ -310,6 +337,33 @@ map/map.s: map/map.c.s
 map/map.c.s:
 	$(MAKE) -f CMakeFiles\project.dir\build.make CMakeFiles/project.dir/map/map.c.s
 .PHONY : map/map.c.s
+
+thread/mythread.obj: thread/mythread.c.obj
+
+.PHONY : thread/mythread.obj
+
+# target to build an object file
+thread/mythread.c.obj:
+	$(MAKE) -f CMakeFiles\project.dir\build.make CMakeFiles/project.dir/thread/mythread.c.obj
+.PHONY : thread/mythread.c.obj
+
+thread/mythread.i: thread/mythread.c.i
+
+.PHONY : thread/mythread.i
+
+# target to preprocess a source file
+thread/mythread.c.i:
+	$(MAKE) -f CMakeFiles\project.dir\build.make CMakeFiles/project.dir/thread/mythread.c.i
+.PHONY : thread/mythread.c.i
+
+thread/mythread.s: thread/mythread.c.s
+
+.PHONY : thread/mythread.s
+
+# target to generate assembly for a file
+thread/mythread.c.s:
+	$(MAKE) -f CMakeFiles\project.dir\build.make CMakeFiles/project.dir/thread/mythread.c.s
+.PHONY : thread/mythread.c.s
 
 tree/binary_tree.obj: tree/binary_tree.c.obj
 
@@ -392,9 +446,15 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... map/arrayMap.obj
+	@echo ... map/arrayMap.i
+	@echo ... map/arrayMap.s
 	@echo ... map/map.obj
 	@echo ... map/map.i
 	@echo ... map/map.s
+	@echo ... thread/mythread.obj
+	@echo ... thread/mythread.i
+	@echo ... thread/mythread.s
 	@echo ... tree/binary_tree.obj
 	@echo ... tree/binary_tree.i
 	@echo ... tree/binary_tree.s
