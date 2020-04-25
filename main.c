@@ -199,3 +199,8 @@ void testLinkList(){
     printf("(size_t) &((TYPE *)0)->MEMBER = %d\n",(unsigned __int64)(&((linkList*)0)->length));
     printf("Hello, World!\n");
 }
+/***
+ * include 宏
+  char* str = { #include "a.txt" };
+  * 读取a.txt中使用引号(")包括起来的内容
+**/
