@@ -21,7 +21,7 @@
 
 typedef struct xml_node{
     char *name;//标签名
-    char* annotation;//注释
+    //char *annotation;//注释
     ARRAY_MAP attributes;//属性集合(里面包含map集合)
     LinkList children;//子标签(xml)
 }xml_node;
