@@ -36,9 +36,9 @@ typedef struct xml{
 typedef xml* XML;
 
 XML xml_init(char* _name);
-XML xml_create_root(char* _name);
-XML xml_add_children(XML _father,char* _name);
-int xml_add_attribute(XML _this,char* _name,char* _value);
+XML xml_create_root(char* _rootNodeName);
+XML xml_add_child(XML _father,char* _childNodeName);
+int xml_add_attribute(XML _this,char* _attributeName,char* _attributeValue);
 
 
 
